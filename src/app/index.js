@@ -1,14 +1,15 @@
 import React from 'react'
-// import Header from './components/header/index'
-// import Home from './components/home/index'
+import { Provider } from 'react-redux'
+
 import Header from './containers/header/headerContainer'
 import Home from './containers/home/homeContainer'
+import appStore from './redux/store'
 export default function RootApp() {
+   // console.log('appStore',appStore);
     return (
-        <div>
-            <Header />
-            <Home />
-        </div>
-
+            <Provider store={appStore}>
+                <Header />
+                <Home />
+            </Provider>
     )
 }

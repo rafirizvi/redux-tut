@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 class Home extends Component {
 
+    constructor(props){
+        super(props);
+        console.log(props);
+    }
     render() {
         return (
             <div>
@@ -17,7 +21,8 @@ class Home extends Component {
                         </span>
                     </div>
                     <div className="btn-wrapper item">
-                        <button>Add To Cart</button>
+                        <button onClick={()=>
+                        this.props.addToCartHandler({name:'iPhone',price:100})}>Add To Cart</button>
                     </div>
 
                 </div>
