@@ -3,7 +3,7 @@ class Home extends Component {
 
     constructor(props){
         super(props);
-        console.log(props);
+        console.log('home',props);
     }
     render() {
         return (

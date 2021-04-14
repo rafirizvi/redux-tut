@@ -4,14 +4,20 @@ import addToCartStateInit from "../reduxStates/addToCartState";
 let updateCart = (state,action)=>{
     return {
         ...state,
-        ...action.data
+        cartData:action.data
     }
 }
 let cardItems=(state=addToCartStateInit,action)=>{
+    // console.log('red',action.data);
     switch(action.type){
         case ADD_TO_CART:
+            return {
+                ...state,
+                cartData:action.data
+            }
+           
            // console.log('reducer',action);
-            return updateCart(state,action)
+         // return updateCart(state,action)
         default:
             return state;
     }

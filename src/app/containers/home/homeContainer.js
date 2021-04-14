@@ -6,9 +6,11 @@ import { addToCart } from '../../redux/actions/addToCartAction'
 
 
 const mapStateToProps=(state)=>{
+  console.log('state',state);
+  //return cardData:state
     return {
-        cardData:state
-    }
+       cardData:state
+   }
 }
 
 const mapDispatchToProps =(dispatch)=>{
